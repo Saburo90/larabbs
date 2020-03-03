@@ -20,7 +20,7 @@ class EnsureEmailIsVerified
         // 非邮箱认证和登录相关路由
         if ($request->user() && ! $request->user()->hasVerifiedEmail() && ! $request->is('email/*', 'logout')) {
             // 根据客户端返回内容
-            return $request->expectsJson() ? abort('403', '您的邮箱尚未激活！') : redirect()->route('verification.notice');
+            return $request->expectsJson() ? abort(403, '您的邮箱尚未激活！') : redirect()->route('verification.notice');
         }
         return $next($request);
     }

@@ -24,7 +24,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 // Email 认证相关路由
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
-Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+// 认证邮件重新发送使用post会产生bug, 使用get或者any
+Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 # === Auth::routes END ===
 

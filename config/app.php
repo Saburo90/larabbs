@@ -181,6 +181,9 @@ return [
 
         // 验证码
         Mews\Captcha\CaptchaServiceProvider::class,
+
+        // 代码提示工具
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
     /*

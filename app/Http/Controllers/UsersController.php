@@ -8,6 +8,14 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        // 登录权限控制
+        $this->middleware('auth', [
+            'except' => ['show']
+        ]);
+    }
+
     public function show(User $user)
     {
         return view('users.show', compact('user'));
@@ -15,11 +23,16 @@ class UsersController extends Controller
 
     public function edit(User $user)
     {
+        // 越权操作控制
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     public function update(UserRequest $request,ImageUploadHandler $uploader, User $user)
     {
+        // 越权操作控制
+        $this->authorize('update', $user);
+
         $data = $request->all();
 
         // 用户修改了头像

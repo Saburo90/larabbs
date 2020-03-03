@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Carbon 本地化 （中文：7天前)
+        \Carbon\Carbon::setLocale('zh');
     }
 }

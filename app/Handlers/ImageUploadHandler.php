@@ -1,6 +1,7 @@
 <?php
 namespace App\Handlers;
 use Illuminate\Support\Str;
+use Image;
 
 class ImageUploadHandler
 {
@@ -31,8 +32,28 @@ class ImageUploadHandler
         // 将图片移动到上传存储目录中
         $file->move($upload_path, $file_name);
 
+        // 如果限制了图片的宽度，则进行裁剪
+        if ($max_width && $extension != 'gif') {
+            $this->reduceSize($upload_path . '/' . $file_name, $max_width);
+        }
+
         return [
             'path' => config('app.url') . "/$folder_name/$file_name"
         ];
+    }
+
+    public function reduceSize($file_path, $max_width)
+    {
+        // 实例化
+        $image = Image::make($file_path);
+        // 大小调整
+        $image->resize($max_width, null, function ($constraint) {
+            // 设定宽度是 $max_width，高度等比例缩放
+            $constraint->aspectRatio();
+            // 防止裁图时图片尺寸变大
+            $constraint->upsize();
+        });
+        // 修改完成保存
+        $image->save();
     }
 }

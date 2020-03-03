@@ -184,6 +184,9 @@ return [
 
         // 代码提示工具
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        // 图片裁剪工具
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -235,6 +238,9 @@ return [
 
         // 验证码
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+
+        // 图片裁剪
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

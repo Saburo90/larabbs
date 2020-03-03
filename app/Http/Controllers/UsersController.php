@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Handlers\ImageUploadHandler;
-use App\Models\User;
-
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
+use App\Handlers\ImageUploadHandler;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -25,7 +24,7 @@ class UsersController extends Controller
 
         // 用户修改了头像
         if ($request->avatar) {
-            $change_avatar_res = $uploader->sava($request->avatar, 'avatars', $user->id);
+            $change_avatar_res = $uploader->sava($request->avatar, 'avatars', $user->id, 416);
             if ($change_avatar_res) {
                 $data['avatar'] = $change_avatar_res['path'];
             }

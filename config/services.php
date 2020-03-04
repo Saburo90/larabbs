@@ -40,4 +40,10 @@ return [
         ],
     ],
 
+    // 百度翻译
+    'baidu_translate' => [
+        'appid' => env('BAIDU_TRANSLATE_APPID'),
+        'key' => env('BAIDU_TRANSLATE_KEY')
+    ]
+
 ];

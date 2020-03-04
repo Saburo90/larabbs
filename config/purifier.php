@@ -4,6 +4,8 @@ return [
     'encoding'      => 'UTF-8',
     'finalize'      => true,
     'cachePath'     => storage_path('app/purifier'),
+//    'cacheFileMode' => 0755,
+    // chmod bug修复
     'cacheFileMode' => 0755,
     'settings'      => [
         'user_topic_body' => [

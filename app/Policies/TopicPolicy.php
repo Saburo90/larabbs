@@ -9,11 +9,13 @@ class TopicPolicy extends Policy
 {
     public function update(User $user, Topic $topic)
     {
-         return $topic->user_id == $user->id;
+        // 更新帖子越权控制
+        return $user->isAuthorOf($topic);
     }
 
     public function destroy(User $user, Topic $topic)
     {
-        return true;
+        // 删除帖子越权控制
+        return $user->isAuthorOf($topic);
     }
 }

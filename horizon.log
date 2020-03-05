@@ -12,3 +12,10 @@ Horizon started successfully.
 [2020-03-05 11:47:01][11] Processing: App\Jobs\TranslateSlug
 [2020-03-05 11:47:01][11] Processing: App\Jobs\TranslateSlug
 [2020-03-05 11:47:01][11] Failed:     App\Jobs\TranslateSlug
+[2020-03-05 13:51:49][15] Processing: App\Notifications\TopicReplied
+[2020-03-05 13:51:49][15] Processing: App\Notifications\TopicReplied
+[2020-03-05 13:51:49][15] Processing: App\Notifications\TopicReplied
+[2020-03-05 13:51:49][15] Failed:     App\Notifications\TopicReplied
+Horizon started successfully.
+[2020-03-05 14:31:46][16] Processing: App\Jobs\TranslateSlug
+[2020-03-05 14:31:47][16] Processed:  App\Jobs\TranslateSlug

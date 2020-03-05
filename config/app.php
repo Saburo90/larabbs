@@ -187,6 +187,9 @@ return [
 
         // 图片裁剪工具
         Intervention\Image\ImageServiceProvider::class,
+
+        // laravel-permission权限控制
+        Spatie\Permission\PermissionServiceProvider::class,
     ],
 
     /*

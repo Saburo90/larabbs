@@ -1,2 +1,14 @@
 Horizon started successfully.
 Horizon started successfully.
+[2020-03-05 10:48:19][3] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:48:19][3] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:48:19][3] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:48:19][3] Failed:     App\Jobs\TranslateSlug
+[2020-03-05 10:55:05][5] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:55:05][5] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:55:05][5] Processing: App\Jobs\TranslateSlug
+[2020-03-05 10:55:05][5] Failed:     App\Jobs\TranslateSlug
+[2020-03-05 11:47:01][11] Processing: App\Jobs\TranslateSlug
+[2020-03-05 11:47:01][11] Processing: App\Jobs\TranslateSlug
+[2020-03-05 11:47:01][11] Processing: App\Jobs\TranslateSlug
+[2020-03-05 11:47:01][11] Failed:     App\Jobs\TranslateSlug

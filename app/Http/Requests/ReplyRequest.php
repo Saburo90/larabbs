@@ -12,7 +12,7 @@ class ReplyRequest extends Request
             case 'POST':
             {
                 return [
-                    // CREATE ROLES
+                    'content' => 'required|min:2'
                 ];
             }
             // UPDATE
@@ -30,6 +30,10 @@ class ReplyRequest extends Request
                 return [];
             };
         }
+
+//        return [
+//            'content' => 'required|min:2'
+//        ];
     }
 
     public function messages()

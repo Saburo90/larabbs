@@ -12,16 +12,7 @@ class Topic extends Model
      */
     public function replies()
     {
-        return $this->hasMany(Reply::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * 帖子与用户表关联关系
-     */
-    public function user()
-    {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Reply::class, 'topic_id', 'id');
     }
 
     /**
@@ -30,8 +21,18 @@ class Topic extends Model
      */
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * 帖子与用户表关联关系
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
 
     public function scopeWithOrder($query, $order)
     {

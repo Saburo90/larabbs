@@ -73,6 +73,7 @@ body {
   }
 }
 
+
 /* Topic Index Page */
 .topics-index-page, .categories-show-page, .root-page {
   .topic-list {
@@ -108,6 +109,7 @@ body {
     }
   }
 }
+
 
 /* Add container and footer space */
 #app > div.container {
@@ -148,22 +150,6 @@ body {
   }
 }
 
-
-/* 消息通知 */
-.notification-badge {
-  .badge {
-    font-size: 12px;
-    margin-top: 14px;
-  }
-
-  .badge-secondary {
-    background-color: #EBE8E8;
-  }
-
-  .badge-hint {
-    background-color: #d15b47 !important;
-  }
-}
 
 /* 消息通知 */
 .notification-badge {
